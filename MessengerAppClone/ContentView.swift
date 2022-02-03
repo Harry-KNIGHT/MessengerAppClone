@@ -24,7 +24,7 @@ struct ContentView: View {
                                     .clipShape(Circle())
                                     .frame(width: 35, height: 35)
                             }).sheet(isPresented: $showingSheet) {
-                                AccountParametersView(author: Author(name: "Maximus", photoName: "avatar8"))
+                                AccountParametersView(author: Author(name: "Maximus", lastName: "Thales", photoName: "avatar8"))
                             }
                         }
                         ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
@@ -64,8 +64,12 @@ struct HomeView: View {
                     LazyHStack(spacing: 20) {
                         ForEach(Author.all) { author in
                             VStack {
-                                ProfilPictureCell(author: author, width: 75, isConnectedOnListMessage: true)
+                                ProfilPictureCell(author: author, width: 60, isConnectedOnListMessage: true)
                                 Text(author.name)
+                                    .font(.caption)
+                                Text(author.lastName)
+                                    .font(.caption)
+
                             }
                         }
                     }.padding(.all, 10)
@@ -73,7 +77,7 @@ struct HomeView: View {
                 
                 ForEach(Message.all) { message in
                     HStack {
-                        ProfilPictureCell(author: message.author, width: 70, isConnectedOnListMessage: false)
+                        ProfilPictureCell(author: message.author, width: 60, isConnectedOnListMessage: false)
                             .padding(.vertical, 10)
                         VStack(alignment: .leading, spacing: 4) {
                             Text(message.author.name)

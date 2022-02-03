@@ -11,8 +11,8 @@ struct CircleConnection: View {
     var body: some View {
         Circle()
             .fill(.green)
-            .frame(width: 20, height: 20)
-            .overlay(Circle().stroke(Color.white, lineWidth: 5))
+            .frame(width: 17, height: 17)
+            .overlay(Circle().stroke(Color.white, lineWidth: 3))
     }
 }
 

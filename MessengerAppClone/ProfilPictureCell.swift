@@ -27,6 +27,6 @@ struct ProfilPictureCell: View {
 
 struct ProfilPictureCell_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilPictureCell(author: Author(name: "Henry", photoName: "avatar1"), width: 50)
+        ProfilPictureCell(author: Author(name: "Henry", lastName: "ee",photoName: "avatar1"), width: 50)
     }
 }

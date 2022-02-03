@@ -18,7 +18,7 @@ struct AccountParametersView: View {
             Text("Hey, I am a modal view, dev call me sheet but I'm not using CSS 🥲")
                 .font(.body)
                 .multilineTextAlignment(.center)
-                .padding(.top, 50)
+                .padding(.top, 30)
             Spacer()
         }.padding(.top, 40)
     }
@@ -26,6 +26,6 @@ struct AccountParametersView: View {
 
 struct AccountParametersView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountParametersView(author: Author(name: "Maximus", photoName: "avatar8"))
+        AccountParametersView(author: Author(name: "Maximus", lastName: "Thales", photoName: "avatar8"))
     }
 }

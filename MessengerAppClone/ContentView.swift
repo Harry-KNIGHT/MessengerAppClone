@@ -17,11 +17,13 @@ struct ContentView: View {
                     .toolbar {
                         ToolbarItem(placement: ToolbarItemPlacement.navigationBarLeading) {
                             Button(action: {
-                                // More code to come
                                 showingSheet.toggle()
-                            } , label: { Circle()
-                                .frame(width: 30, height: 30)}
-                            ).sheet(isPresented: $showingSheet) {
+                            } , label: { Image("avatar8")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Circle())
+                                    .frame(width: 35, height: 35)
+                            }).sheet(isPresented: $showingSheet) {
                                 AccountParametersView(author: Author(name: "Jerôme", photoName: "avatar0"))
                             }
                         }

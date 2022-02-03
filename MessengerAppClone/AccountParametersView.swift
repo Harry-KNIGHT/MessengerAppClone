@@ -14,10 +14,11 @@ struct AccountParametersView: View {
         ProfilPictureCell(author: author,width: 90, isConnectedOnListMessage: false)
             Text(author.name)
                 .font(.title2.bold())
-                .padding()
+                .padding(4)
             Text("Hey, I am a modal view, dev call me sheet but I'm not using CSS 🥲")
                 .font(.body)
                 .multilineTextAlignment(.center)
+                .padding(.top, 50)
             Spacer()
         }.padding(.top, 40)
     }
@@ -25,6 +26,6 @@ struct AccountParametersView: View {
 
 struct AccountParametersView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountParametersView(author: Author(name: "Jérôme", photoName: "avatar0"))
+        AccountParametersView(author: Author(name: "Maximus", photoName: "avatar8"))
     }
 }

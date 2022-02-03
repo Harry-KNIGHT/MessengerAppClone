@@ -69,7 +69,6 @@ struct HomeView: View {
                                     .font(.caption)
                                 Text(author.lastName)
                                     .font(.caption)
-
                             }
                         }
                     }.padding(.all, 10)
@@ -80,8 +79,12 @@ struct HomeView: View {
                         ProfilPictureCell(author: message.author, width: 60, isConnectedOnListMessage: false)
                             .padding(.vertical, 10)
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(message.author.name)
-                                .font(.headline)
+                            HStack {
+                                Text(message.author.name)
+                                    .font(.headline)
+                                Text(message.author.lastName)
+                                    .font(.headline)
+                            }
                             Text(message.lastMessageContent)
                                 .foregroundColor(.gray)
                                 .lineLimit(1)

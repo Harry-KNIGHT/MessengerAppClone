@@ -24,7 +24,7 @@ struct ContentView: View {
                                     .clipShape(Circle())
                                     .frame(width: 35, height: 35)
                             }).sheet(isPresented: $showingSheet) {
-                                AccountParametersView(author: Author(name: "Jerôme", photoName: "avatar0"))
+                                AccountParametersView(author: Author(name: "Maximus", photoName: "avatar8"))
                             }
                         }
                         ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {

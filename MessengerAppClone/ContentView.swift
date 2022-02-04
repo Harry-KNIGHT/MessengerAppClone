@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingSheet = false
+    
+    // Navigation title modifier
+    init() {
+            UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "HelveticaNeue-Bold", size: 20)!]
+        }
+    
     var body: some View {
         TabView {
             NavigationView {
@@ -32,6 +38,7 @@ struct ContentView: View {
                                 // More code to come
                             }, label: {
                                 Image(systemName: "square.and.pencil")
+                                    .font(.title3.bold())
                             })
                         }
                     }
@@ -86,6 +93,7 @@ struct HomeView: View {
                                     .font(.headline)
                             }
                             Text(message.lastMessageContent)
+                                .font(.subheadline)
                                 .foregroundColor(.gray)
                                 .lineLimit(1)
                             Text(relativeFormatter.localizedString(for: message.creationDate, relativeTo: Date()))
